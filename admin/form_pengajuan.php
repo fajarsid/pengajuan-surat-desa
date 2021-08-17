@@ -3,6 +3,8 @@
 require_once "../koneksi.php";
  
 $nama = $nik = $hp = $email = $alamat = $jk = $jsurat = "";
+$rdmNIK = rand();
+$rdmHP = rand();
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     
@@ -18,9 +20,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
       $sql = "INSERT INTO pengajuan set 
       nama = '$_POST[nama]',
-      nik = '$_POST[nik]',
+      nik = '$rdmNIK',
       email = '$_POST[email]',
-      hp = '$_POST[hp]',
+      hp = '$rdmHP',
       alamat = '$_POST[alamat]',
       jk = '$_POST[jk]',
       jsurat = '$_POST[jsurat]'
